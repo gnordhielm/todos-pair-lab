@@ -18,6 +18,14 @@
 		</li>
 	</ul>
 
+	<form ng-submit='todosCtrl.addTodo()'>
+		<input type="text" placeholder='New Todo' ng-model='todosCtrl.newTodo.title'>
+		<label for="todosCtrl.newTodo.importance">Number</label>
+		<input type="number" ng-model='todosCtrl.newTodo.importance'>
+		<input type="checkbox" placeholder='Importance Level' ng-checked='todosCtrl.newTodo.completed' ng-model='todosCtrl.newTodo.completed'>
+		<input class="btn btn-default" type="submit"/>
+	</form>
+
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript" src="./js/todosController.js"></script>
 </body>

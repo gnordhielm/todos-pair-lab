@@ -17,6 +17,19 @@
       	importance: 0, // 1 - 5
       	completed: false
       }
+      self.addTodo = addTodo
+      function addTodo() {
+        self.allTodos.push({
+          title: self.newTodo.title,
+          importance: self.newTodo.importance,
+          completed: self.newTodo.completed
+        })
+        self.newTodo = {
+          title: '',
+          importance: 0,
+          completed: false
+        }
+      }
+      }
 
-    }
 }())
