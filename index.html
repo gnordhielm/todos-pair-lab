@@ -1,15 +1,22 @@
 <!DOCTYPE html>
 <html ng-app='todosApp'>
 <head>
-	<title>newsite</title>
+	<title>To Do App</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
 <body id='container' ng-controller='TodosController as todosCtrl'>
-	<div  ng-repeat='todo in todosCtrl.allTodos'>
+	<h1 class="header">John's and Gus' To Do App</h1>
 
-	</div>
+	<hr>
+
+	<ul class="todos">
+		<li  ng-repeat='todo in todosCtrl.allTodos' >
+			<input type="checkbox" ng-checked="todo.completed" name="completed">
+			<p ng-class="{'completed':todo.completed}">{{todo.title}}</p>
+		</li>
+	</ul>
 
 <script type="text/javascript" src="./js/main.js"></script>
 <script type="text/javascript" src="./js/todosController.js"></script>
