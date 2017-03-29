@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='todosApp'>
 <head>
 	<title>newsite</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
-	<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
 </head>
-<body>
+<body id='container' ng-controller='TodosController as todosCtrl'>
+	<div  ng-repeat='todo in todosCtrl.allTodos'>
+
+	</div>
 
 <script type="text/javascript" src="./js/main.js"></script>
+<script type="text/javascript" src="./js/todosController.js"></script>
 </body>
 </html>
