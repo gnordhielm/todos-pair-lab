@@ -11,9 +11,11 @@
 
 	<hr>
 
+	<h2 class="remaining">You have {{todosCtrl.allTodos.length - todosCtrl.getCompleted().length}} things to do.</h2>
+
 	<ul class="todos">
 		<li  ng-repeat='todo in todosCtrl.allTodos' >
-			<input type="checkbox" ng-checked="todo.completed" name="completed">
+			<input type="checkbox" ng-model="todo.completed" name="completed">
 			<p ng-class="{'completed':todo.completed}">{{todo.title}}</p>
 		</li>
 	</ul>

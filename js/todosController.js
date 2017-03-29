@@ -30,6 +30,10 @@
           completed: false
         }
       }
+      self.getCompleted = getCompleted
+      function getCompleted() {
+      	return self.allTodos.filter(function(todo){ return todo.completed })
       }
 
+     }
 }())
