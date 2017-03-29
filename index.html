@@ -11,20 +11,20 @@
 
 	<hr>
 
-	<h2 class="remaining">You have {{todosCtrl.allTodos.length - todosCtrl.getCompleted().length}} things to do.</h2>
+	<h2 class="remaining">You have {{allTodos.length - getCompleted().length}} things to do.</h2>
 
 	<ul class="todos">
-		<li  ng-repeat='todo in todosCtrl.allTodos' >
+		<li  ng-repeat='todo in allTodos' >
 			<input type="checkbox" ng-model="todo.completed" name="completed">
 			<p ng-class="{'completed':todo.completed}">{{todo.title}}</p>
 		</li>
 	</ul>
 
-	<form ng-submit='todosCtrl.addTodo()'>
-		<input type="text" placeholder='New Todo' ng-model='todosCtrl.newTodo.title'>
-		<label for="todosCtrl.newTodo.importance">Number</label>
-		<input type="number" ng-model='todosCtrl.newTodo.importance'>
-		<input type="checkbox" placeholder='Importance Level' ng-checked='todosCtrl.newTodo.completed' ng-model='todosCtrl.newTodo.completed'>
+	<form ng-submit='addTodo()'>
+		<input type="text" placeholder='New Todo' ng-model='newTodo.title'>
+		<label for="newTodo.importance">Number</label>
+		<input type="number" ng-model='newTodo.importance'>
+		<input type="checkbox" placeholder='Importance Level' ng-checked='newTodo.completed' ng-model='newTodo.completed'>
 		<input class="btn btn-default" type="submit"/>
 	</form>
 
